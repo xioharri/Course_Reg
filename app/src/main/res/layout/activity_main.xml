@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--Creates Text Box for Firstname-->
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="110dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="FirstName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Creates Text Box for Lastname-->
+    <EditText
+        android:id="@+id/editText_Surname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Lastname"
+        app:layout_constraintStart_toStartOf="@+id/editText_name"
+        app:layout_constraintTop_toBottomOf="@+id/editText_name" />
+
+    <!--Creates Text Box for Marks-->
+    <EditText
+        android:id="@+id/editText_Marks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Marks"
+        app:layout_constraintStart_toStartOf="@+id/editText_Surname"
+        app:layout_constraintTop_toTopOf="@+id/editText_Surname" />
+
+    <!--Creates Button that's used to add Data-->
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="ADD DATA"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_viewAll"
+        app:layout_constraintStart_toStartOf="@+id/editText_id" />
+
+    <!--Creates Button that's used to see all Data in Student.db-->
+    <Button
+        android:id="@+id/button_viewAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="65dp"
+        android:text="View All"
+        app:layout_constraintStart_toEndOf="@+id/button_add"
+        app:layout_constraintTop_toBottomOf="@+id/editText_id" />
+
+    <!--Creates Button that's used to update data in Student.db-->
+    <Button
+        android:id="@+id/button_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_delete"
+        app:layout_constraintStart_toStartOf="@+id/button_add" />
+
+    <!--Creates Text Box for ID that autoincrements -->
+    <EditText
+        android:id="@+id/editText_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="id"
+        app:layout_constraintStart_toStartOf="@+id/editText_priority"
+        app:layout_constraintTop_toBottomOf="@+id/editText_priority" />
+
+    <!--Creates Button that's used to update data in Student.db-->
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Delete"
+        app:layout_constraintStart_toStartOf="@+id/button_viewAll"
+        app:layout_constraintTop_toBottomOf="@+id/button_viewAll" />
+
+    <!--Creates Text Box for Course-->
+    <EditText
+        android:id="@+id/editText_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Course"
+        app:layout_constraintStart_toStartOf="@+id/editText_Marks"
+        app:layout_constraintTop_toBottomOf="@+id/editText_Marks" />
+
+    <!--Creates Text Box for Priority-->
+    <EditText
+        android:id="@+id/editText_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Priority Grade"
+        app:layout_constraintStart_toStartOf="@+id/editText_course"
+        app:layout_constraintTop_toBottomOf="@+id/editText_course" />
+
+</android.support.constraint.ConstraintLayout>
